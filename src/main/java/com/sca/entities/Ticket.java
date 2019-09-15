@@ -10,27 +10,9 @@ import javax.persistence.Table;
 public class Ticket {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int ticketNumber;
 	private String name;
 	private String source;
 	private String dest;
-	private int phoneNumber;
-
-	public int getTicketNumber() {
-		return ticketNumber;
-	}
-
-	public void setTicketNumber(int ticketNumber) {
-		this.ticketNumber = ticketNumber;
-	}
-
-	public int getPhoneNumber() {
-		return phoneNumber;
-	}
-
-	public void setPhoneNumber(int phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
 
 	public String getName() {
 		return name;
@@ -58,9 +40,10 @@ public class Ticket {
 
 	@Override
 	public String toString() {
-		return "Ticket [ticketNumber=" + ticketNumber + ", name=" + name
-				+ ", source=" + source + ", dest=" + dest + ", phoneNumber="
-				+ phoneNumber + "]";
+		return "Ticket [name=" + name + ", source=" + source + ", dest=" + dest
+				+ "]";
 	}
+
+	
 
 }
